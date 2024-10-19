@@ -171,7 +171,7 @@ void convert_to_rgba(unsigned char image[HEIGHT][WIDTH], png_bytep *row_pointers
             *(px+1) = image[y][x];
             *(px+2) = image[y][x];
             *(px+3) = 255;
-            if((*px >= 150 && (*px+1) >= 150 && (*px+2) >= 150))
+            if((*px >= WHITE_RANGE && (*px+1) >= WHITE_RANGE && (*px+2) >= WHITE_RANGE))
             {
                 *px = 255;
                 *(px+1) = 255;
